@@ -1,0 +1,14 @@
+.project
+.bundle
+.redcar/*
+public/uploads/*
+public/uploads/tmp/*
+nbproject/*
+nbproject/private/*
+.idea/*
+db/*.sqlite3
+log/*.log
+tmp/**/*
+*.*~
+*~
+
