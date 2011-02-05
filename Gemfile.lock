@@ -8,6 +8,15 @@ GIT
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
 
+GIT
+  remote: http://github.com/plataformatec/devise.git
+  revision: 7a1852e9f57016c1764befd7a7e3b4169d78ae54
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -54,9 +63,6 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     database_cleaner (0.6.2)
-    devise (1.1.3)
-      bcrypt-ruby (~> 2.1.2)
-      warden (~> 0.10.7)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -80,6 +86,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.11)
+      rake
     mongo (1.2.0)
       bson (>= 1.2.0)
     mongoid_slug (0.6.2)
@@ -87,6 +95,7 @@ GEM
       stringex (~> 1.2.0)
     nifty-generators (0.4.2)
     nokogiri (1.4.4)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -101,6 +110,7 @@ GEM
       activesupport (= 3.0.3)
       bundler (~> 1.0)
       railties (= 3.0.3)
+    rails3-generators (0.14.0)
     rails3-jquery-autocomplete (0.6.1)
       rails (~> 3.0.0)
     railties (3.0.3)
@@ -129,7 +139,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
-    warden (0.10.7)
+    warden (1.0.3)
       rack (>= 1.0.0)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
@@ -146,14 +156,16 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   database_cleaner
-  devise (= 1.1.3)
+  devise!
   factory_girl
   haml-rails
   jquery-rails
+  mocha
   mongoid!
   mongoid_slug
   nifty-generators
   rails (= 3.0.3)
+  rails3-generators
   rails3-jquery-autocomplete
   rspec-rails
   spork

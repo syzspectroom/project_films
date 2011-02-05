@@ -7,9 +7,13 @@ gem 'mongoid_slug', :require => 'mongoid/slug'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete'
-gem 'devise', '1.1.3'
+
 gem 'carrierwave'
 gem 'nifty-generators'
+gem 'devise', :git => "http://github.com/plataformatec/devise.git"
+
+gem 'rails3-generators' #Rails 3 compatible generators for gems that don’t have them yet
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -50,4 +54,6 @@ group :test do
   #gem 'machinist', '>= 2.0.0.beta1'
   #gem 'faker'
 end
+
+gem "mocha", :group => :test
 
