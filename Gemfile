@@ -11,7 +11,8 @@ gem 'rails3-jquery-autocomplete'
 gem 'carrierwave'
 gem 'nifty-generators'
 gem 'devise', :git => "http://github.com/plataformatec/devise.git"
-
+gem 'hpricot' # devise dependency for haml 
+gem 'ruby_parser'
 gem 'rails3-generators' #Rails 3 compatible generators for gems that don’t have them yet
 
 # Bundle edge Rails instead:
@@ -41,7 +42,8 @@ gem 'rails3-generators' #Rails 3 compatible generators for gems that don’t hav
 #   gem 'webrat'
 # end
 
-group :test do
+# Bundle gems needed for testing
+group :test, :development do
   gem 'cucumber-rails'
   gem 'cucumber'
   gem 'rspec-rails'
@@ -49,11 +51,11 @@ group :test do
   gem 'database_cleaner' # clean database between tests
   gem 'factory_girl'
   gem 'spork'
+  gem 'capybara'
+  gem 'mocha'
   #gem 'spork'
   #gem 'launchy'   # so we can use : Then show me the page
   #gem 'machinist', '>= 2.0.0.beta1'
   #gem 'faker'
 end
-
-gem "mocha", :group => :test
 
