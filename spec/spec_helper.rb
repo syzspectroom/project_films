@@ -19,8 +19,16 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
   config.mock_with :rspec
+
+    # Clean up the database
+  require 'database_cleaner'
   config.before :suite do
-    Mongoid.master.collections.select{|c| c.name !~ /system/}.each(&:drop)
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.orm = "mongoid"
+  end
+
+  config.before :each do
+    DatabaseCleaner.clean
   end
 
  ActiveSupport::Dependencies.clear
