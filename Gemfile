@@ -52,7 +52,7 @@ group :test, :development do
   gem 'factory_girl'
   gem 'spork'
   gem 'capybara'
-  gem 'mocha'
+  gem 'pickle'
   #gem 'spork'
   #gem 'launchy'   # so we can use : Then show me the page
   #gem 'machinist', '>= 2.0.0.beta1'

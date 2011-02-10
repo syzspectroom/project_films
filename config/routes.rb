@@ -6,6 +6,8 @@ Kino::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :users
+
   get 'home/autocomplete_film_name'
 
   # The priority is based upon order of creation:

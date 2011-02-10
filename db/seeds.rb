@@ -24,7 +24,7 @@ puts 'New user created: ' << user.name
 
 Factory.define :film do |f|
   f.sequence (:name) { |n| "film-#{n}" }
-  f.sequence (:orig_name) { |n| "original film-#{n}" }
+  f.sequence (:orig_name) { |n| "original film #{n}" }
 end
 
 3.times do
