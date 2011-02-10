@@ -19,6 +19,14 @@ Factory.define :user do |u|
   u.password_confirmation '123456'
 end
 
-user = Factory.build :user
-user.save!
+user = Factory :user
 puts 'New user created: ' << user.name
+
+Factory.define :film do |f|
+  f.sequence (:name) { |n| "film-#{n}" }
+  f.sequence (:orig_name) { |n| "original film-#{n}" }
+end
+
+3.times do
+  Factory :film
+end
