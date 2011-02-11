@@ -11,7 +11,7 @@ gem 'rails3-jquery-autocomplete'
 gem 'carrierwave'
 gem 'nifty-generators'
 gem 'devise', :git => "http://github.com/plataformatec/devise.git"
-gem 'hpricot' # devise dependency for haml 
+gem 'hpricot' # devise dependency for haml
 gem 'ruby_parser'
 gem 'rails3-generators' #Rails 3 compatible generators for gems that don’t have them yet
 
@@ -46,7 +46,7 @@ gem 'rails3-generators' #Rails 3 compatible generators for gems that don’t hav
 group :test, :development do
   gem 'cucumber-rails'
   gem 'cucumber'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.5.0'
   gem 'webrat'
   gem 'database_cleaner' # clean database between tests
   gem 'factory_girl'

@@ -2,9 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'active_model'
-require 'mongoid'
-require 'factory_girl'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -20,25 +17,11 @@ RSpec.configure do |config|
   # config.mock_with :rr
   config.mock_with :rspec
 
-    # Clean up the database
-  require 'database_cleaner'
-  config.before :suite do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.orm = "mongoid"
-  end
-
-  config.before :each do
-    DatabaseCleaner.clean
-  end
-
- ActiveSupport::Dependencies.clear
-
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-#  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
- # config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = true
 end
-
